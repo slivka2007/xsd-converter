@@ -3,8 +3,7 @@ from typing import Any, Optional
 from pathlib import Path
 
 import xmlschema
-from xmlschema.validators import XsdType
-from xmlschema.validators import XsdGroup, XsdAtomicRestriction, XsdComplexType
+from xmlschema.validators import XsdType, XsdGroup, XsdAtomicRestriction, XsdComplexType
 from lxml import etree
 
 
@@ -52,22 +51,31 @@ class XmlGenerator:
     @staticmethod
     def handle_attributes(element: etree.Element, element_type: XsdType) -> None:
         """Set attributes on the element based on its XSD definition."""
-        for attr_name, attr_props in element_type.attributes.items():
-            if attr_props.fixed:
-                element.set(attr_name, attr_props.fixed)
-            elif attr_props.default:
-                element.set(attr_name, attr_props.default)
-            else:
-                element.set(attr_name, "sample_attr")
+        if hasattr(element_type, "attributes"):
+            for attr_name, attr_props in element_type.attributes.items():
+                if attr_props.fixed:
+                    element.set(attr_name, attr_props.fixed)
+                elif attr_props.default:
+                    element.set(attr_name, attr_props.default)
+                else:
+                    element.set(attr_name, "sample_attr")
 
     @staticmethod
     def handle_child_elements(element: etree.Element, element_type: XsdType) -> None:
         """Add child elements according to XSD constraints (groups, complex types, etc.)."""
+
+        # Default maxOccurs value
+        MAX_OCCURS_DEFAULT = 1
+
         if isinstance(element_type.content, XsdGroup):
             for child in element_type.content.iter_elements():
                 min_occurs = child.min_occurs or 0
-                max_occurs = child.max_occurs if child.max_occurs is not None else 2
-                occurs = max(min_occurs, 1) if max_occurs == 1 else 2
+                max_occurs = (
+                    child.max_occurs
+                    if child.max_occurs is not None
+                    else MAX_OCCURS_DEFAULT
+                )
+                occurs = max(min_occurs, 1) if max_occurs == 1 else MAX_OCCURS_DEFAULT
                 for _ in range(occurs):
                     child_element = XmlGenerator.build_element(child.type, child.name)
                     element.append(child_element)
