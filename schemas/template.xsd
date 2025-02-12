@@ -1,0 +1,458 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:element name="PurchaseOrder" type="PurchaseOrderType" />
+   <xsd:complexType name="PurchaseOrderType">
+      <xsd:sequence>
+         <xsd:element name="Header" type="S_Header" />
+         <xsd:element name="Items" type="S_Items" minOccurs="0" maxOccurs="unbounded" />
+      </xsd:sequence>
+      <xsd:attribute name="OrderDate" type="xsd:date" />
+   </xsd:complexType>
+
+   <xsd:complexType name="S_Header">
+      <xsd:annotation>
+         <xsd:documentation>Header of Purchase Order</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="Set_Code" type="E_0A1" />
+         <xsd:element name="Set_Number" type="E_0C4" />
+      </xsd:sequence>
+      <xsd:attribute name="Type" default="Segment" type="xsd:string" />
+      <xsd:attribute name="ID" default="Header" type="xsd:string" />
+      <xsd:attribute name="Name" default="PO Header" type="xsd:string" />
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0A1">
+      <xsd:annotation>
+         <xsd:documentation>Code Identifying a Set</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="842" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0A1" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Set Code" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0C4">
+      <xsd:annotation>
+         <xsd:documentation>Number Identifying a Set</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:attribute name="E_Type" fixed="AN" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0C4" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Set Number" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="S_Items">
+      <xsd:annotation>
+         <xsd:documentation>Items of Purchase Order</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="Material_Name" type="S_0H9" minOccurs="1" />
+         <xsd:element name="Material_Contact" type="S_0G6" minOccurs="0" maxOccurs="unbounded"
+            nillable="true" />
+      </xsd:sequence>
+      <xsd:attribute name="Type" default="Loop" type="xsd:string" />
+      <xsd:attribute name="ID" default="Item" type="xsd:string" />
+      <xsd:attribute name="Name" default="PO Item" type="xsd:string" />
+   </xsd:complexType>
+
+   <xsd:complexType name="S_0H9">
+      <xsd:annotation>
+         <xsd:documentation>Name of Material</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="M_Code" type="E_P03_71" />
+         <xsd:element name="M_Name" type="E_D03_92" minOccurs="0" nillable="true" />
+         <xsd:element name="M_ID_Qualifier" type="E_U03_43" minOccurs="0" nillable="true" />
+         <xsd:element name="M_ID_Code" type="E_T03_84" minOccurs="0" nillable="true" />
+         <xsd:element name="M_Rel_Qualifier" type="E_R03_25" minOccurs="0" nillable="true" />
+         <xsd:element name="M_Rel_Code" type="E_N03_76" minOccurs="0" nillable="true" />
+         <xsd:element name="Material_Information" type="S_0F2" minOccurs="0" maxOccurs="unbounded"
+            nillable="true" />
+      </xsd:sequence>
+      <xsd:attribute name="Type" default="Segment" type="xsd:string" />
+      <xsd:attribute name="ID" default="Material" type="xsd:string" />
+      <xsd:attribute name="Name" default="Material Name" type="xsd:string" />
+   </xsd:complexType>
+
+   <xsd:complexType name="E_P03_71">
+      <xsd:annotation>
+         <xsd:documentation>Material Code</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="123" />
+            <xsd:enumeration value="456" />
+            <xsd:enumeration value="789" />
+            <xsd:enumeration value="ACH" />
+            <xsd:enumeration value="BCH" />
+            <xsd:enumeration value="CCH" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="P03_71" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Material Code" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_D03_92">
+      <xsd:annotation>
+         <xsd:documentation>Material Name</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:minLength value="1" />
+            <xsd:maxLength value="50" />
+            <xsd:attribute name="E_Type" fixed="AN" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="D03_92" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Material Name" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_U03_43">
+      <xsd:annotation>
+         <xsd:documentation>Material ID Qualifier</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="10" />
+            <xsd:enumeration value="20" />
+            <xsd:enumeration value="30" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="U03_43" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Material ID Qualifier" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_T03_84">
+      <xsd:annotation>
+         <xsd:documentation>Material ID Code</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:minLength value="2" />
+            <xsd:maxLength value="60" />
+            <xsd:attribute name="E_Type" fixed="AN" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="T03_84" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Material ID Code" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_R03_25">
+      <xsd:annotation>
+         <xsd:documentation>Material Relationship Qualifier</xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="Type" default="Element" type="xsd:string" />
+   </xsd:complexType>
+
+   <xsd:complexType name="E_N03_76">
+      <xsd:annotation>
+         <xsd:documentation>Material Relationship Code</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="PR" />
+            <xsd:enumeration value="CR" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="N03_76" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Material Relationship Code" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="S_0F2">
+      <xsd:annotation>
+         <xsd:documentation>Material Information</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="Material_Quantity" type="E_A4D_13" minOccurs="1" />
+         <xsd:element name="Material_Price" type="E_B4D_33" minOccurs="1" />
+         <xsd:element name="Material_Info_Hex" type="E_B78_22" minOccurs="0" maxOccurs="unbounded"
+            nillable="true" />
+         <xsd:element name="Material_Info_Base64" type="E_145_89" minOccurs="0"
+            maxOccurs="unbounded" nillable="true" />
+         <xsd:element name="Material_Info_Any" type="E_C45_8C" minOccurs="0" maxOccurs="unbounded"
+            nillable="true" />
+      </xsd:sequence>
+      <xsd:attribute name="Type" default="Loop" type="xsd:string" />
+      <xsd:attribute name="ID" default="Material" type="xsd:string" />
+      <xsd:attribute name="Name" default="PO Item Material" type="xsd:string" />
+   </xsd:complexType>
+
+   <xsd:complexType name="S_0G6">
+      <xsd:annotation>
+         <xsd:documentation>Material Contact Information</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element name="Contact_Function_Code" type="E_0A2_AB" />
+         <xsd:element name="Contact_Name" type="E_0A2_01" minOccurs="0" nillable="true" />
+         <xsd:element name="Contact_Phone_Qualifier" type="E_0DP_06" minOccurs="0"
+            nillable="true" />
+         <xsd:element name="Contact_Phone" type="E_0DP_31" minOccurs="0" nillable="true" />
+         <xsd:element name="Contact_Phone_Qualifier_1" type="E_0DP_A6" minOccurs="0"
+            nillable="true" />
+         <xsd:element name="Contact_Phone_1" type="E_0DP_31" minOccurs="0" nillable="true" />
+         <xsd:element name="Contact_Phone_Qualifier_2" type="E_0DP_56" minOccurs="0"
+            nillable="true" />
+         <xsd:element name="Contact_Phone_2" type="E_0DP_31" minOccurs="0" nillable="true" />
+         <xsd:element name="Contact_Reference" type="E_0AD_91" minOccurs="0" nillable="true" />
+      </xsd:sequence>
+      <xsd:attribute name="Type" default="Loop" type="xsd:string" />
+      <xsd:attribute name="ID" default="Item" type="xsd:string" />
+      <xsd:attribute name="Name" default="PO Item" type="xsd:string" />
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0A2_AB">
+      <xsd:annotation>
+         <xsd:documentation>Contact Function Code</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="AD" />
+            <xsd:enumeration value="FB" />
+            <xsd:enumeration value="XC" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0A2_AB" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Contact Function Code" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0A2_01">
+      <xsd:annotation>
+         <xsd:documentation>Contact Name</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:minLength value="1" />
+            <xsd:maxLength value="50" />
+            <xsd:attribute name="E_Type" fixed="AN" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0A2_01" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Contact Name" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0DP_06">
+      <xsd:annotation>
+         <xsd:documentation>Contact Phone Qualifier</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="TE" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0DP_06" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Contact Phone Qualifier" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0DP_31">
+      <xsd:annotation>
+         <xsd:documentation>Contact Phone</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:minLength value="1" />
+            <xsd:maxLength value="256" />
+            <xsd:attribute name="E_Type" fixed="AN" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0DP_31" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Contact Phone" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0DP_A6">
+      <xsd:annotation>
+         <xsd:documentation>Contact Phone Qualifier 1</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="FX" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0DP_A6" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Contact Phone Qualifier" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0DP_56">
+      <xsd:annotation>
+         <xsd:documentation>Contact Phone Qualifier 2</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:enumeration value="EM" />
+            <xsd:attribute name="E_Type" fixed="ID" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0DP_56" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Contact Phone Qualifier" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_0AD_91">
+      <xsd:annotation>
+         <xsd:documentation>Contact Reference</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_String">
+            <xsd:minLength value="1" />
+            <xsd:maxLength value="20" />
+            <xsd:attribute name="E_Type" fixed="AN" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="0AD_91" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Contact Reference" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_A4D_13">
+      <xsd:annotation>
+         <xsd:documentation>Quantity Amount</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_Integer">
+            <xsd:attribute name="E_Type" fixed="R" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="A4D_13" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Quantity Amount" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_B4D_33">
+      <xsd:annotation>
+         <xsd:documentation>Monetary Amount</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_Decimal">
+            <xsd:attribute name="E_Type" fixed="R" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="B4D_33" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Monetary Amount" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_B78_22">
+      <xsd:annotation>
+         <xsd:documentation>Hex Binary String</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_hexBinary">
+            <xsd:attribute name="E_Type" fixed="R" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="B78_22" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Hex Binary" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_145_89">
+      <xsd:annotation>
+         <xsd:documentation>Base 64 Binary String</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_base64Binary">
+            <xsd:attribute name="E_Type" fixed="R" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="145_89" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Base 64 Binary" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_C45_8C">
+      <xsd:annotation>
+         <xsd:documentation>Any Type</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:restriction base="E_Any">
+            <xsd:attribute name="E_Type" fixed="R" type="xsd:string" />
+            <xsd:attribute name="ID" fixed="C45_8C" type="xsd:string" />
+            <xsd:attribute name="Name" fixed="Any" type="xsd:string" />
+         </xsd:restriction>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_String">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:string">
+            <xsd:attribute name="Type" default="Element" type="xsd:string" />
+            <xsd:attribute name="E_Type" type="xsd:string" />
+            <xsd:attribute name="Macro" type="xsd:string" />
+            <xsd:attribute name="ApplicationInfo" type="xsd:string" />
+            <xsd:attribute name="ID" type="xsd:string" />
+            <xsd:attribute name="Name" type="xsd:string" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_Integer">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:integer">
+            <xsd:attribute name="Type" default="Element" type="xsd:string" />
+            <xsd:attribute name="E_Type" type="xsd:string" />
+            <xsd:attribute name="Macro" type="xsd:string" />
+            <xsd:attribute name="ApplicationInfo" type="xsd:string" />
+            <xsd:attribute name="ID" type="xsd:string" />
+            <xsd:attribute name="Name" type="xsd:string" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_Decimal">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:decimal">
+            <xsd:attribute name="Type" default="Element" type="xsd:string" />
+            <xsd:attribute name="E_Type" type="xsd:string" />
+            <xsd:attribute name="Macro" type="xsd:string" />
+            <xsd:attribute name="ApplicationInfo" type="xsd:string" />
+            <xsd:attribute name="ID" type="xsd:string" />
+            <xsd:attribute name="Name" type="xsd:string" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_hexBinary">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:hexBinary">
+            <xsd:attribute name="Type" default="Element" type="xsd:string" />
+            <xsd:attribute name="E_Type" type="xsd:string" />
+            <xsd:attribute name="Macro" type="xsd:string" />
+            <xsd:attribute name="ApplicationInfo" type="xsd:string" />
+            <xsd:attribute name="ID" type="xsd:string" />
+            <xsd:attribute name="Name" type="xsd:string" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_base64Binary">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:base64Binary">
+            <xsd:attribute name="Type" default="Element" type="xsd:string" />
+            <xsd:attribute name="E_Type" type="xsd:string" />
+            <xsd:attribute name="Macro" type="xsd:string" />
+            <xsd:attribute name="ApplicationInfo" type="xsd:string" />
+            <xsd:attribute name="ID" type="xsd:string" />
+            <xsd:attribute name="Name" type="xsd:string" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="E_Any">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:string">
+            <xsd:attribute name="Type" default="Element" type="xsd:string" />
+            <xsd:attribute name="E_Type" type="xsd:string" />
+            <xsd:attribute name="Macro" type="xsd:string" />
+            <xsd:attribute name="ApplicationInfo" type="xsd:string" />
+            <xsd:attribute name="ID" type="xsd:string" />
+            <xsd:attribute name="Name" type="xsd:string" />
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

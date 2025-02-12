@@ -1,0 +1,12 @@
+#Ignore VScode workspace files
+*.code-workspace
+.vscode/
+
+#Ignore virtual environment
+venv_xsd_converter/
+
+#Ignore python cache files
+__pycache__/
+
+#Ignore python compiled files
+*.pyc

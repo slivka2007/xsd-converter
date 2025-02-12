@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PurchaseOrder OrderDate="sample_attr">
+  <Header Type="Segment" ID="Header" Name="PO Header">
+    <Set_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A1" Name="Set Code">842</Set_Code>
+    <Set_Number Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0C4" Name="Set Number">Sample Text</Set_Number>
+  </Header>
+  <Items Type="Loop" ID="Item" Name="PO Item">
+    <Material_Name Type="Segment" ID="Material" Name="Material Name">
+      <M_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="P03_71" Name="Material Code">123</M_Code>
+      <M_Name Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="D03_92" Name="Material Name">Sample Text</M_Name>
+      <M_ID_Qualifier Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="U03_43" Name="Material ID Qualifier">10</M_ID_Qualifier>
+      <M_ID_Code Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="T03_84" Name="Material ID Code">Sample Text</M_ID_Code>
+      <M_Rel_Qualifier Type="Element">Sample Value</M_Rel_Qualifier>
+      <M_Rel_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="N03_76" Name="Material Relationship Code">PR</M_Rel_Code>
+      <Material_Information Type="Loop" ID="Material" Name="PO Item Material">
+        <Material_Quantity Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="A4D_13" Name="Quantity Amount">123</Material_Quantity>
+        <Material_Price Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B4D_33" Name="Monetary Amount">123.45</Material_Price>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+      </Material_Information>
+      <Material_Information Type="Loop" ID="Material" Name="PO Item Material">
+        <Material_Quantity Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="A4D_13" Name="Quantity Amount">123</Material_Quantity>
+        <Material_Price Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B4D_33" Name="Monetary Amount">123.45</Material_Price>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+      </Material_Information>
+    </Material_Name>
+    <Material_Contact Type="Loop" ID="Item" Name="PO Item">
+      <Contact_Function_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_AB" Name="Contact Function Code">AD</Contact_Function_Code>
+      <Contact_Name Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_01" Name="Contact Name">Sample Text</Contact_Name>
+      <Contact_Phone_Qualifier Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_06" Name="Contact Phone Qualifier">TE</Contact_Phone_Qualifier>
+      <Contact_Phone Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone>
+      <Contact_Phone_Qualifier_1 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_A6" Name="Contact Phone Qualifier">FX</Contact_Phone_Qualifier_1>
+      <Contact_Phone_1 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_1>
+      <Contact_Phone_Qualifier_2 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_56" Name="Contact Phone Qualifier">EM</Contact_Phone_Qualifier_2>
+      <Contact_Phone_2 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_2>
+      <Contact_Reference Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0AD_91" Name="Contact Reference">Sample Text</Contact_Reference>
+    </Material_Contact>
+    <Material_Contact Type="Loop" ID="Item" Name="PO Item">
+      <Contact_Function_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_AB" Name="Contact Function Code">AD</Contact_Function_Code>
+      <Contact_Name Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_01" Name="Contact Name">Sample Text</Contact_Name>
+      <Contact_Phone_Qualifier Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_06" Name="Contact Phone Qualifier">TE</Contact_Phone_Qualifier>
+      <Contact_Phone Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone>
+      <Contact_Phone_Qualifier_1 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_A6" Name="Contact Phone Qualifier">FX</Contact_Phone_Qualifier_1>
+      <Contact_Phone_1 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_1>
+      <Contact_Phone_Qualifier_2 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_56" Name="Contact Phone Qualifier">EM</Contact_Phone_Qualifier_2>
+      <Contact_Phone_2 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_2>
+      <Contact_Reference Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0AD_91" Name="Contact Reference">Sample Text</Contact_Reference>
+    </Material_Contact>
+  </Items>
+  <Items Type="Loop" ID="Item" Name="PO Item">
+    <Material_Name Type="Segment" ID="Material" Name="Material Name">
+      <M_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="P03_71" Name="Material Code">123</M_Code>
+      <M_Name Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="D03_92" Name="Material Name">Sample Text</M_Name>
+      <M_ID_Qualifier Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="U03_43" Name="Material ID Qualifier">10</M_ID_Qualifier>
+      <M_ID_Code Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="T03_84" Name="Material ID Code">Sample Text</M_ID_Code>
+      <M_Rel_Qualifier Type="Element">Sample Value</M_Rel_Qualifier>
+      <M_Rel_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="N03_76" Name="Material Relationship Code">PR</M_Rel_Code>
+      <Material_Information Type="Loop" ID="Material" Name="PO Item Material">
+        <Material_Quantity Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="A4D_13" Name="Quantity Amount">123</Material_Quantity>
+        <Material_Price Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B4D_33" Name="Monetary Amount">123.45</Material_Price>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+      </Material_Information>
+      <Material_Information Type="Loop" ID="Material" Name="PO Item Material">
+        <Material_Quantity Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="A4D_13" Name="Quantity Amount">123</Material_Quantity>
+        <Material_Price Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B4D_33" Name="Monetary Amount">123.45</Material_Price>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Hex Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="B78_22" Name="Hex Binary">48656C6C6F</Material_Info_Hex>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Base64 Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="145_89" Name="Base 64 Binary">SGVsbG8=</Material_Info_Base64>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+        <Material_Info_Any Type="Element" E_Type="R" Macro="sample_attr" ApplicationInfo="sample_attr" ID="C45_8C" Name="Any">Sample Text</Material_Info_Any>
+      </Material_Information>
+    </Material_Name>
+    <Material_Contact Type="Loop" ID="Item" Name="PO Item">
+      <Contact_Function_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_AB" Name="Contact Function Code">AD</Contact_Function_Code>
+      <Contact_Name Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_01" Name="Contact Name">Sample Text</Contact_Name>
+      <Contact_Phone_Qualifier Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_06" Name="Contact Phone Qualifier">TE</Contact_Phone_Qualifier>
+      <Contact_Phone Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone>
+      <Contact_Phone_Qualifier_1 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_A6" Name="Contact Phone Qualifier">FX</Contact_Phone_Qualifier_1>
+      <Contact_Phone_1 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_1>
+      <Contact_Phone_Qualifier_2 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_56" Name="Contact Phone Qualifier">EM</Contact_Phone_Qualifier_2>
+      <Contact_Phone_2 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_2>
+      <Contact_Reference Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0AD_91" Name="Contact Reference">Sample Text</Contact_Reference>
+    </Material_Contact>
+    <Material_Contact Type="Loop" ID="Item" Name="PO Item">
+      <Contact_Function_Code Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_AB" Name="Contact Function Code">AD</Contact_Function_Code>
+      <Contact_Name Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0A2_01" Name="Contact Name">Sample Text</Contact_Name>
+      <Contact_Phone_Qualifier Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_06" Name="Contact Phone Qualifier">TE</Contact_Phone_Qualifier>
+      <Contact_Phone Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone>
+      <Contact_Phone_Qualifier_1 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_A6" Name="Contact Phone Qualifier">FX</Contact_Phone_Qualifier_1>
+      <Contact_Phone_1 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_1>
+      <Contact_Phone_Qualifier_2 Type="Element" E_Type="ID" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_56" Name="Contact Phone Qualifier">EM</Contact_Phone_Qualifier_2>
+      <Contact_Phone_2 Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0DP_31" Name="Contact Phone">Sample Text</Contact_Phone_2>
+      <Contact_Reference Type="Element" E_Type="AN" Macro="sample_attr" ApplicationInfo="sample_attr" ID="0AD_91" Name="Contact Reference">Sample Text</Contact_Reference>
+    </Material_Contact>
+  </Items>
+</PurchaseOrder>
