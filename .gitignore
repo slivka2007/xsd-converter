@@ -10,3 +10,6 @@ __pycache__/
 
 #Ignore python compiled files
 *.pyc
+
+#Ignore shell scripts
+*.sh
