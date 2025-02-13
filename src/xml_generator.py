@@ -1,4 +1,6 @@
 # src/xml_generator.py
+import json
+import xmltodict
 from typing import Any, Optional
 from pathlib import Path
 
@@ -8,9 +10,10 @@ from lxml import etree
 
 
 class XmlGenerator:
-    def __init__(self, xsd_path: Path, xml_path: Path) -> None:
+    def __init__(self, xsd_path: Path, xml_path: Path, json_path: Path) -> None:
         self.xsd: Path = xsd_path
         self.xml: Path = xml_path
+        self.json: Path = json_path
 
     @staticmethod
     def get_base_type(t: Any) -> Optional[str]:
@@ -115,11 +118,20 @@ class XmlGenerator:
         root = self.build_element(root_element.type, root_element.name)
 
         xml_tree = etree.ElementTree(root)
+
+        # Save to xml file
         xml_string = etree.tostring(
             xml_tree, pretty_print=True, xml_declaration=True, encoding="UTF-8"
         )
-        with open(self.xml, "wb") as f:
-            f.write(xml_string)
+        with open(self.xml, "wb") as xml_file:
+            xml_file.write(xml_string)
+
+        # Save to json file
+        xml_dict = xmltodict.parse(xml_string)
+        json_string = json.dumps(xml_dict, indent=4)
+        with open(self.json, "w") as json_file:
+            json_file.write(json_string)
 
         print("Generated sample XML file:", self.xml)
+        print("Generated sample JSON file:", self.json)
         return xml_tree

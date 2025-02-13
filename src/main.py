@@ -19,8 +19,9 @@ def main() -> NoReturn:
 
     output_dir = project_dir / "output"
     xml_path = output_dir / config["xml_file"]
+    json_path = output_dir / config["json_file"]
 
-    xml_generator = XmlGenerator(xsd_path, xml_path)
+    xml_generator = XmlGenerator(xsd_path, xml_path, json_path)
     xml_generator.generate_sample_xml()
 
 

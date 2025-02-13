@@ -1,4 +1,5 @@
 {
   "xsd_file": "template.xsd",
-  "xml_file": "sample_output.xml"
+  "xml_file": "sample_output.xml",
+  "json_file": "sample_output.json"
 }
