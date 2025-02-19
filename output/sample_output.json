@@ -24,200 +24,1960 @@
                 "#text": "Sample Text"
             }
         },
-        "Items": {
-            "@Type": "Loop",
-            "@ID": "Item",
-            "@Name": "PO Item",
-            "Material_Name": {
-                "@Type": "Segment",
-                "@ID": "Material",
-                "@Name": "Material Name",
-                "M_Code": {
-                    "@Type": "Element",
-                    "@E_Type": "ID",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "P03_71",
-                    "@Name": "Material Code",
-                    "#text": "123"
-                },
-                "M_Name": {
-                    "@Type": "Element",
-                    "@E_Type": "AN",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "D03_92",
-                    "@Name": "Material Name",
-                    "#text": "Sample Text"
-                },
-                "M_ID_Qualifier": {
-                    "@Type": "Element",
-                    "@E_Type": "ID",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "U03_43",
-                    "@Name": "Material ID Qualifier",
-                    "#text": "10"
-                },
-                "M_ID_Code": {
-                    "@Type": "Element",
-                    "@E_Type": "AN",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "T03_84",
-                    "@Name": "Material ID Code",
-                    "#text": "Sample Text"
-                },
-                "M_Rel_Qualifier": {
-                    "@Type": "Element",
-                    "#text": "Sample Value"
-                },
-                "M_Rel_Code": {
-                    "@Type": "Element",
-                    "@E_Type": "ID",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "N03_76",
-                    "@Name": "Material Relationship Code",
-                    "#text": "PR"
-                },
-                "Material_Information": {
-                    "@Type": "Loop",
-                    "@ID": "Material",
-                    "@Name": "PO Item Material",
-                    "Material_Quantity": {
-                        "@Type": "Element",
-                        "@E_Type": "R",
-                        "@Macro": "sample_attr",
-                        "@ApplicationInfo": "sample_attr",
-                        "@ID": "A4D_13",
-                        "@Name": "Quantity Amount",
-                        "#text": "123"
-                    },
-                    "Material_Price": {
-                        "@Type": "Element",
-                        "@E_Type": "R",
-                        "@Macro": "sample_attr",
-                        "@ApplicationInfo": "sample_attr",
-                        "@ID": "B4D_33",
-                        "@Name": "Monetary Amount",
-                        "#text": "123.45"
-                    },
-                    "Material_Info_Hex": {
-                        "@Type": "Element",
-                        "@E_Type": "R",
-                        "@Macro": "sample_attr",
-                        "@ApplicationInfo": "sample_attr",
-                        "@ID": "B78_22",
-                        "@Name": "Hex Binary",
-                        "#text": "48656C6C6F"
-                    },
-                    "Material_Info_Base64": {
-                        "@Type": "Element",
-                        "@E_Type": "R",
-                        "@Macro": "sample_attr",
-                        "@ApplicationInfo": "sample_attr",
-                        "@ID": "145_89",
-                        "@Name": "Base 64 Binary",
-                        "#text": "SGVsbG8="
-                    },
-                    "Material_Info_Any": {
-                        "@Type": "Element",
-                        "@E_Type": "R",
-                        "@Macro": "sample_attr",
-                        "@ApplicationInfo": "sample_attr",
-                        "@ID": "C45_8C",
-                        "@Name": "Any",
-                        "#text": "Sample Text"
-                    }
-                }
-            },
-            "Material_Contact": {
+        "Items": [
+            {
                 "@Type": "Loop",
                 "@ID": "Item",
                 "@Name": "PO Item",
-                "Contact_Function_Code": {
-                    "@Type": "Element",
-                    "@E_Type": "ID",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0A2_AB",
-                    "@Name": "Contact Function Code",
-                    "#text": "AD"
+                "Material_Name": {
+                    "@Type": "Segment",
+                    "@ID": "Material",
+                    "@Name": "Material Name",
+                    "M_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "P03_71",
+                        "@Name": "Material Code",
+                        "#text": "123"
+                    },
+                    "M_Name": {
+                        "@Type": "Element",
+                        "@E_Type": "AN",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "D03_92",
+                        "@Name": "Material Name",
+                        "#text": "Sample Text"
+                    },
+                    "M_ID_Qualifier": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "U03_43",
+                        "@Name": "Material ID Qualifier",
+                        "#text": "10"
+                    },
+                    "M_ID_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "AN",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "T03_84",
+                        "@Name": "Material ID Code",
+                        "#text": "Sample Text"
+                    },
+                    "M_Rel_Qualifier": {
+                        "@Type": "Element",
+                        "#text": "Sample Value"
+                    },
+                    "M_Rel_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "N03_76",
+                        "@Name": "Material Relationship Code",
+                        "#text": "PR"
+                    },
+                    "Material_Information": [
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        },
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        },
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        }
+                    ]
                 },
-                "Contact_Name": {
-                    "@Type": "Element",
-                    "@E_Type": "AN",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0A2_01",
-                    "@Name": "Contact Name",
-                    "#text": "Sample Text"
+                "Material_Contact": [
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    },
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    },
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    }
+                ]
+            },
+            {
+                "@Type": "Loop",
+                "@ID": "Item",
+                "@Name": "PO Item",
+                "Material_Name": {
+                    "@Type": "Segment",
+                    "@ID": "Material",
+                    "@Name": "Material Name",
+                    "M_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "P03_71",
+                        "@Name": "Material Code",
+                        "#text": "123"
+                    },
+                    "M_Name": {
+                        "@Type": "Element",
+                        "@E_Type": "AN",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "D03_92",
+                        "@Name": "Material Name",
+                        "#text": "Sample Text"
+                    },
+                    "M_ID_Qualifier": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "U03_43",
+                        "@Name": "Material ID Qualifier",
+                        "#text": "10"
+                    },
+                    "M_ID_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "AN",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "T03_84",
+                        "@Name": "Material ID Code",
+                        "#text": "Sample Text"
+                    },
+                    "M_Rel_Qualifier": {
+                        "@Type": "Element",
+                        "#text": "Sample Value"
+                    },
+                    "M_Rel_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "N03_76",
+                        "@Name": "Material Relationship Code",
+                        "#text": "PR"
+                    },
+                    "Material_Information": [
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        },
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        },
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        }
+                    ]
                 },
-                "Contact_Phone_Qualifier": {
-                    "@Type": "Element",
-                    "@E_Type": "ID",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0DP_06",
-                    "@Name": "Contact Phone Qualifier",
-                    "#text": "TE"
+                "Material_Contact": [
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    },
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    },
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    }
+                ]
+            },
+            {
+                "@Type": "Loop",
+                "@ID": "Item",
+                "@Name": "PO Item",
+                "Material_Name": {
+                    "@Type": "Segment",
+                    "@ID": "Material",
+                    "@Name": "Material Name",
+                    "M_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "P03_71",
+                        "@Name": "Material Code",
+                        "#text": "123"
+                    },
+                    "M_Name": {
+                        "@Type": "Element",
+                        "@E_Type": "AN",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "D03_92",
+                        "@Name": "Material Name",
+                        "#text": "Sample Text"
+                    },
+                    "M_ID_Qualifier": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "U03_43",
+                        "@Name": "Material ID Qualifier",
+                        "#text": "10"
+                    },
+                    "M_ID_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "AN",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "T03_84",
+                        "@Name": "Material ID Code",
+                        "#text": "Sample Text"
+                    },
+                    "M_Rel_Qualifier": {
+                        "@Type": "Element",
+                        "#text": "Sample Value"
+                    },
+                    "M_Rel_Code": {
+                        "@Type": "Element",
+                        "@E_Type": "ID",
+                        "@Macro": "sample_attr",
+                        "@ApplicationInfo": "sample_attr",
+                        "@ID": "N03_76",
+                        "@Name": "Material Relationship Code",
+                        "#text": "PR"
+                    },
+                    "Material_Information": [
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        },
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        },
+                        {
+                            "@Type": "Loop",
+                            "@ID": "Material",
+                            "@Name": "PO Item Material",
+                            "Material_Quantity": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "A4D_13",
+                                "@Name": "Quantity Amount",
+                                "#text": "123"
+                            },
+                            "Material_Price": {
+                                "@Type": "Element",
+                                "@E_Type": "R",
+                                "@Macro": "sample_attr",
+                                "@ApplicationInfo": "sample_attr",
+                                "@ID": "B4D_33",
+                                "@Name": "Monetary Amount",
+                                "#text": "123.45"
+                            },
+                            "Material_Info_Hex": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "B78_22",
+                                    "@Name": "Hex Binary",
+                                    "#text": "48656C6C6F"
+                                }
+                            ],
+                            "Material_Info_Base64": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "145_89",
+                                    "@Name": "Base 64 Binary",
+                                    "#text": "SGVsbG8="
+                                }
+                            ],
+                            "Material_Info_Any": [
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                },
+                                {
+                                    "@Type": "Element",
+                                    "@E_Type": "R",
+                                    "@Macro": "sample_attr",
+                                    "@ApplicationInfo": "sample_attr",
+                                    "@ID": "C45_8C",
+                                    "@Name": "Any",
+                                    "#text": "Sample Text"
+                                }
+                            ]
+                        }
+                    ]
                 },
-                "Contact_Phone": {
-                    "@Type": "Element",
-                    "@E_Type": "AN",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0DP_31",
-                    "@Name": "Contact Phone",
-                    "#text": "Sample Text"
-                },
-                "Contact_Phone_Qualifier_1": {
-                    "@Type": "Element",
-                    "@E_Type": "ID",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0DP_A6",
-                    "@Name": "Contact Phone Qualifier",
-                    "#text": "FX"
-                },
-                "Contact_Phone_1": {
-                    "@Type": "Element",
-                    "@E_Type": "AN",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0DP_31",
-                    "@Name": "Contact Phone",
-                    "#text": "Sample Text"
-                },
-                "Contact_Phone_Qualifier_2": {
-                    "@Type": "Element",
-                    "@E_Type": "ID",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0DP_56",
-                    "@Name": "Contact Phone Qualifier",
-                    "#text": "EM"
-                },
-                "Contact_Phone_2": {
-                    "@Type": "Element",
-                    "@E_Type": "AN",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0DP_31",
-                    "@Name": "Contact Phone",
-                    "#text": "Sample Text"
-                },
-                "Contact_Reference": {
-                    "@Type": "Element",
-                    "@E_Type": "AN",
-                    "@Macro": "sample_attr",
-                    "@ApplicationInfo": "sample_attr",
-                    "@ID": "0AD_91",
-                    "@Name": "Contact Reference",
-                    "#text": "Sample Text"
-                }
+                "Material_Contact": [
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    },
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    },
+                    {
+                        "@Type": "Loop",
+                        "@ID": "Item",
+                        "@Name": "PO Item",
+                        "Contact_Function_Code": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_AB",
+                            "@Name": "Contact Function Code",
+                            "#text": "AD"
+                        },
+                        "Contact_Name": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0A2_01",
+                            "@Name": "Contact Name",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_06",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "TE"
+                        },
+                        "Contact_Phone": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_1": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_A6",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "FX"
+                        },
+                        "Contact_Phone_1": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Phone_Qualifier_2": {
+                            "@Type": "Element",
+                            "@E_Type": "ID",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_56",
+                            "@Name": "Contact Phone Qualifier",
+                            "#text": "EM"
+                        },
+                        "Contact_Phone_2": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0DP_31",
+                            "@Name": "Contact Phone",
+                            "#text": "Sample Text"
+                        },
+                        "Contact_Reference": {
+                            "@Type": "Element",
+                            "@E_Type": "AN",
+                            "@Macro": "sample_attr",
+                            "@ApplicationInfo": "sample_attr",
+                            "@ID": "0AD_91",
+                            "@Name": "Contact Reference",
+                            "#text": "Sample Text"
+                        }
+                    }
+                ]
             }
-        }
+        ]
     }
 }
