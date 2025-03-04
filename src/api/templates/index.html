@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XSD Converter</title>
+    <title>XML Schema Converter</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <link rel="stylesheet" href="/xsd-converter/src/api/static/style.css" />
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>XSD Converter</h1>
+        <h1>XML Schema Converter</h1>
         <hr/>
       </header>
       <form method="POST">
@@ -33,7 +33,7 @@
             <textarea
             id="schema_text"
             name="schema_text"
-            placeholder="Paste your XSD here">{{ input_string or '' }}</textarea>
+            placeholder="Paste your XML schema here">{{ input_string or '' }}</textarea>
           </div>
           <div class="sample-area">
             <textarea
