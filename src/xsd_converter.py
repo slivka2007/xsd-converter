@@ -6,7 +6,7 @@ import xmlschema
 from xmlschema.validators import XsdType, XsdGroup, XsdAtomicRestriction, XsdComplexType
 from lxml import etree
 from data_loader import DataLoader
-
+from io import StringIO
 
 class XSDConverter:
     _xml_string: str = None
@@ -141,14 +141,14 @@ class XSDConverter:
         xml_xstring = cls._convert_xsd(max_occurs)
 
         if sample_type == "xml":
-            sample_string = cls.generate_sample_xml(xml_xstring)
+            sample_string = cls._generate_sample_xml(xml_xstring)
         elif sample_type == "json":
-            sample_string = cls.generate_sample_json(xml_xstring)
+            sample_string = cls._generate_sample_json(xml_xstring)
 
         return sample_string
 
     @classmethod
-    def generate_sample_xml(cls, xml_xstring: Any) -> str:
+    def _generate_sample_xml(cls, xml_xstring: Any) -> str:
         """
         Generate a sample XML document from an XSD schema.
         """
@@ -159,7 +159,7 @@ class XSDConverter:
         return DataLoader.load_xml_file()
 
     @classmethod
-    def generate_sample_json(cls, xml_xstring: Any) -> str:
+    def _generate_sample_json(cls, xml_xstring: Any) -> str:
         """
         Generate a sample JSON document from an XSD schema.
         """
@@ -170,3 +170,17 @@ class XSDConverter:
         print("Sample JSON successfully generated.")
 
         return DataLoader.load_json_file()
+
+    @classmethod
+    def validate_schema(cls, schema_text: str) -> tuple[bool, str]:
+        """Validate if the given text is a valid XML schema."""
+        if not schema_text.strip():
+            return False, "Schema text is empty"
+            
+        try:
+            xmlschema.XMLSchema(StringIO(schema_text))
+            return True, ""
+        except xmlschema.XMLSchemaParseError as e:
+            return False, str(e)
+        except Exception as e:
+            return False, f"Unexpected error: {str(e)}"

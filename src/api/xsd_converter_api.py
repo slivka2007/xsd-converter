@@ -46,7 +46,19 @@ def create_converter_blueprint(index_html: str):
                 max_occurs = int(request.form.get("max_occurs", 1))
                 input_string = str(request.form.get("schema_text", ""))
                 sample_string = ""
-                
+
+                # Validate XML Schema
+                if input_string.strip():
+                    is_valid, error_message = XSDConverter.validate_schema(input_string)
+                    if not is_valid:
+                        return render_template(
+                            index_html,
+                            max_occurs=max_occurs,
+                            input_string=input_string,
+                            sample_string=f"Error: Invalid XML Schema\n\nDetails: {error_message}",
+                            now=datetime.now()
+                        )
+
                 if str(request.form.get("xml", "")) == "XML":
                     sample_string = XSDConverter.generate_sample(
                         max_occurs, input_string, "xml"
@@ -95,6 +107,14 @@ def create_api_blueprint():
                 
             if output_format not in ["xml", "json"]:
                 return jsonify({"error": "Invalid output format"}), 400
+
+            # Validate the schema
+            is_valid, error_message = XSDConverter.validate_schema(schema_text)
+            if not is_valid:
+                return jsonify({
+                    "success": False,
+                    "error": f"Invalid XML Schema: {error_message}"
+                }), 400
                 
             result = XSDConverter.generate_sample(max_occurs, schema_text, output_format)
             
@@ -109,17 +129,3 @@ def create_api_blueprint():
             }), 500
     
     return bp
-
-
-class XSDConverterAPI:
-    """Legacy class for backward compatibility."""
-    def __init__(self, index_html: str) -> None:
-        self.app = create_app(index_html)
-        self.index_html = index_html
-
-    def setup_routes(self) -> None:
-        """No longer needed with blueprint approach."""
-        pass
-
-    def run(self, debug: bool = False) -> None:
-        self.app.run(debug=debug)

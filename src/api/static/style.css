@@ -3,7 +3,7 @@
   box-sizing: border-box;
   font-family: "Red Hat Display", sans-serif;
   font-optical-sizing: auto;
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   background-color: black;
   color: white;
@@ -34,6 +34,10 @@ header {
   flex-shrink: 0; /* Prevent header from shrinking */
 }
 
+hr {
+  border: 1px solid grey;
+}
+
 .controls {
   border: 2px solid green;
   padding: 5px;
@@ -50,11 +54,18 @@ header {
   margin-left: 10px;
 }
 
-.controls input[type="submit"], .controls input[type="number"] {
+.controls input {
   border: 2px solid green;
   border-radius: 5px;
   padding: 5px;
   margin-right: 10px;
+  transition: all 0.2s ease;
+}
+
+.controls input:hover, .controls input:active, .controls input:focus {
+  background: lightgrey;
+  color: black;
+  font-weight: 800;
 }
 
 .content {
@@ -76,4 +87,17 @@ header {
   flex: 1; /* Stretch to fill available height */
   resize: none; /* Disable resizing */
   overflow: auto; /* Allow scrolling if content exceeds height */
+}
+
+textarea {
+  border: 2px solid green;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+textarea:focus, textarea:active, textarea:hover {
+  background: lightgrey;
+  color: black;
+  font-weight: 800;
+  caret-color: black; /* Black cursor when focused, to match the text color */
 }
