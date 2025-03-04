@@ -1,5 +1,6 @@
-pathlib
-lxml
-xmlschema
-xmltodict
-typing
+pathlib==1.0.1
+lxml==4.9.3
+xmlschema==2.5.1
+xmltodict==0.13.0
+typing==3.7.4.3
+flask==3.0.2

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  background-color: black;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.controls {
+  border: 2px solid green;
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-shrink: 0; /* Prevent controls from shrinking */
+}
+
+.controls label {
+  margin-right: 5px;
+}
+
+.controls label[id="output_format_label"] {
+  margin-left: 10px;
+}
+
+.content {
+  border: 2px solid green;
+  padding: 5px;
+  display: flex;
+  flex: 1; /* Allow content to take remaining space */
+  overflow: hidden; /* Prevent overflow if content is too large */
+}
+
+.input-area, .sample-area {
+  flex: 1;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-area textarea, .sample-area textarea {
+  flex: 1; /* Stretch to fill available height */
+  resize: none; /* Disable resizing */
+  overflow: auto; /* Allow scrolling if content exceeds height */
+}

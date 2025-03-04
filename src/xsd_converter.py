@@ -130,28 +130,43 @@ class XSDConverter:
         return xml_string
 
     @classmethod
-    def generate_sample_xml(cls, max_occurs: int) -> Any:
+    def generate_sample(cls, max_occurs: int, xsd_string: str, sample_type: str) -> Any:
+        """
+        Generate a sample.
+        """
+
+        if xsd_string != "":
+            DataLoader.write_xsd_file(xsd_string)
+
+        xml_xstring = cls._convert_xsd(max_occurs)
+
+        if sample_type == "xml":
+            sample_string = cls.generate_sample_xml(xml_xstring)
+        elif sample_type == "json":
+            sample_string = cls.generate_sample_json(xml_xstring)
+
+        return sample_string
+
+    @classmethod
+    def generate_sample_xml(cls, xml_xstring: Any) -> str:
         """
         Generate a sample XML document from an XSD schema.
         """
 
-        xml_string = cls._convert_xsd(max_occurs)
-        DataLoader.write_xml_file(xml_string)
+        DataLoader.write_xml_file(xml_xstring)
         print("Sample XML successfully generated.")
 
-        return xml_string
+        return DataLoader.load_xml_file()
 
     @classmethod
-    def generate_sample_json(cls, max_occurs: int) -> str:
+    def generate_sample_json(cls, xml_xstring: Any) -> str:
         """
         Generate a sample JSON document from an XSD schema.
         """
 
-        xml_string = cls._convert_xsd(max_occurs)
-        xml_dict = xmltodict.parse(xml_string)
+        xml_dict = xmltodict.parse(xml_xstring)
         json_string = json.dumps(xml_dict, indent=4)
-
         DataLoader.write_json_file(json_string)
         print("Sample JSON successfully generated.")
 
-        return json_string
+        return DataLoader.load_json_file()

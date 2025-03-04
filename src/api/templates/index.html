@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XSD Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="/xsd-converter/src/api/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>XSD Converter</h1>
+        <hr/>
+      </header>
+      <form method="POST">
+        <div class="controls">
+          <label id="max_occurs_label">Max Occurs:</label>
+          <input
+            type="number"
+            id="max_occurs"
+            name="max_occurs"
+            step="1"
+            min="1"
+            max="100"
+            value="{{ max_occurs or 1 }}" />
+          <label id="output_format_label">Output format:</label>
+          <input type="submit" name="xml" value="XML" />
+          <input type="submit" name="json" value="JSON" />
+        </div>
+        <div class="content">
+          <div class="input-area">
+            <textarea
+            id="schema_text"
+            name="schema_text"
+            placeholder="Paste your XSD here"
+            autofocus>{{ input_string or '' }}</textarea>
+          </div>
+          <div class="sample-area">
+            <textarea
+            id="output_text"
+            name="output_text"
+            placeholder="Sample output"
+            readonly>{{ sample_string or '' }}</textarea>
+          </div>
+        </div>
+      </form>
+      <footer>
+        <hr />
+        <p>&copy; {{ now.year }} Alexander J. Slivka</p>
+      </footer>
+    </div>
+  </body>
+</html>
