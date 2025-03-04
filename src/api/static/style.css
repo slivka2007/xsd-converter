@@ -101,3 +101,9 @@ textarea:focus, textarea:active, textarea:hover {
   font-weight: 800;
   caret-color: black; /* Black cursor when focused, to match the text color */
 }
+
+footer {
+  text-align: right;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+  font-size: 10px;
+}
